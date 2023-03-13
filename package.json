@@ -1,0 +1,20 @@
+{
+  "name": "new-folder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "db:seed": "node index.js",
+    "db:serve": "json-server --watch ./database/db.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "collect.js": "^4.34.3",
+    "json-server": "^0.17.2",
+    "lowdb": "^5.1.0",
+    "node-fetch": "^3.3.1"
+  },
+  "type": "module"
+}
