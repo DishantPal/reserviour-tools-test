@@ -2,7 +2,10 @@ import fetch from "node-fetch";
 
 const PATH_TO_DB = "./database/db.json"
 const API_KEY = "d5443a31-b0bf-5632-86c2-a619d56c9cb8"; // revoke this
-const COLLECTION_CONTRACT = "0xbd3531da5cf5857e7cfaa92426877b022e612cf8";
+const API_URL = "https://api-goerli.reservoir.tools/sales/v4?";
+const COLLECTION_CONTRACT = "0x8bf87b5c8B048C1E8a62f8D0B9b0161050b41BCe";
+// const API_URL = "https://api.reservoir.tools/sales/v4?";
+// const COLLECTION_CONTRACT = "0xbd3531da5cf5857e7cfaa92426877b022e612cf8";
 const DEFAULT_LIMIT = 1000;
 
 const main = async () => {
@@ -37,7 +40,7 @@ const setUpDb = async () => {
 }
 
 const callApi = async (apikey, contract, limit, cursor) => {
-    const url = 'https://api.reservoir.tools/sales/v4?'
+    const url = API_URL
         + ('contract='+contract)
         + ('&limit='+limit)
         + (cursor ? '&continuation='+cursor : '');
